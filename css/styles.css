@@ -21,6 +21,7 @@ body {
   --team-bgc: #f4f4fd;
   --team-list-item-bgc: #ffffff;
   --filter-item-bgc: #f4f4fd;
+  --footer-soc-accent: #31d0aa;
 
   --gra: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7));
 }
@@ -120,6 +121,8 @@ ul {
   margin: auto;
 
   border-bottom: 1px solid #e7e9fc;
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .header-container {
@@ -268,14 +271,19 @@ ul {
 .features-item {
   width: calc((100% - 72px) / 4);
 }
-.feature-icon {
-  display: block;
-  max-width: 264px;
-  height: 112px;
-  background: #f4f4fd;
-  border-radius: 4px;
+.features-item-icon {
+  display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 8px;
+
+  max-width: 264px;
+  height: 112px;
+  border-radius: 4px;
+
+  background: #f4f4fd;
+}
+.feature-icon {
 }
 /* ---------------------Main: section2 What are we doing -------------------------- */
 .work {
@@ -335,7 +343,8 @@ ul {
   gap: 24px;
 }
 
-.team-soc-item {
+.team-soc-item,
+.footer-soc-item {
   height: 40px;
   width: 40px;
 }
@@ -409,6 +418,10 @@ ul {
   background-color: var(--hero-footer-bgc);
 }
 .footer-container {
+  display: flex;
+}
+.footer-logo-text {
+  margin-right: 120px;
 }
 
 .footer-logo-accent {
@@ -418,9 +431,6 @@ ul {
   line-height: 1.17;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-
-  display: flex;
-  align-items: center;
 
   color: var(--accent-color);
 }
@@ -446,14 +456,44 @@ ul {
   margin-top: 16px;
   max-width: 264px;
 }
-
+.footer-soc {
+  max-width: 208px;
+}
 .footer-text-soc {
   font-weight: 500;
   font-size: 16px;
   line-height: calc(24 / 16);
   letter-spacing: 0.02em;
 
+  margin-bottom: 16px;
+
   color: var(--hero-title-btn-color);
+}
+.footer-soc-list {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 16px;
+}
+.footer-soc-item {
+  display: flex;
+}
+.footer-soc-item:is(:hover, :focus) {
+  background-color: var(--footer-soc-accent);
+}
+.footer-soc-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+
+  background-color: #ffffff1a;
+}
+.footer-soc-icon {
+  fill: var(--footer-logo-color);
 }
 
 /* ----------------------------second page PORTFOLIO---------------------------------------- */
@@ -481,7 +521,7 @@ ul {
 .portfolio-container {
 }
 
-.filter-item {
+.filter-btn {
   font-family: inherit;
   font-style: normal;
   font-weight: 500;
@@ -498,14 +538,17 @@ ul {
   padding: 12px 24px;
 }
 
-.current {
+/* .current {
   color: var(--hero-title-btn-color);
+  color: var(--accent-color);
+} */
+
+.filter-btn:is(:hover, :focus) {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
   background-color: var(--hover-focus-color);
+  color: var(--hero-title-btn-color);
 }
-.filter-item:hover,
-.filter-item:focus {
-  color: var(--hover-focus-color);
-}
+
 .portfolio-caption {
 }
 .visually-hidden {
@@ -515,6 +558,9 @@ ul {
   flex-wrap: wrap;
   column-gap: 24px;
   row-gap: 48px;
+}
+.portfolio-item:is(:hover, :focus) {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .portfolio-item {
