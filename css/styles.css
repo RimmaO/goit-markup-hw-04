@@ -40,6 +40,8 @@ body {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
+
+  color: var(--text-contacts-color);
 }
 
 .caption {
@@ -117,7 +119,7 @@ ul {
 .header {
   padding-top: 24px;
   padding-bottom: 24px;
-  max-width: 1440px;
+
   margin: auto;
 
   border-bottom: 1px solid #e7e9fc;
@@ -166,9 +168,6 @@ ul {
 }
 
 .header-link {
-  width: 100%;
-  height: 100%;
-
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -244,15 +243,16 @@ ul {
   background-color: var(--hero-btn-bgc);
 
   border-radius: 4px;
-  padding: 16px 32px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
+  padding: 16px 32px;
   display: block;
   margin: 0 auto;
 }
 
 .hero-btn:hover,
 .hero-btn:focus {
-  color: var(--hover-focus-color);
+  background-color: var(--hover-focus-color);
 }
 /* ---------------------Main: section1 (Our Features)-------------------------- */
 .features {
@@ -304,7 +304,6 @@ ul {
 
 /* ---------------------Main: section3 Our Team -------------------------- */
 .team {
-  max-width: 1440px;
   margin: auto;
   background-color: var(--team-bgc);
 }
@@ -324,6 +323,7 @@ ul {
   border-radius: 0px 0px 4px 4px;
 
   background-color: var(--team-list-item-bgc);
+
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
@@ -361,6 +361,8 @@ ul {
   justify-content: center;
 
   background-color: var(--accent-color);
+  color: var(--footer-logo-color);
+  fill: currentColor;
 }
 
 .team-soc-link:is(:hover, :focus) {
@@ -368,7 +370,6 @@ ul {
 }
 
 .team-soc-icon {
-  fill: var(--footer-logo-color);
 }
 
 /* ---------------------Main: section4 Customers -------------------------- */
@@ -397,10 +398,12 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  color: #8e8f99;
+  fill: currentColor;
 }
 
 .customers-list-icon {
-  fill: #8e8f99;
 }
 
 .customers-list-link:is(:hover, :focus) {
@@ -415,7 +418,7 @@ ul {
 .footer {
   padding-top: 100px;
   padding-bottom: 100px;
-  max-width: 1440px;
+
   margin: auto;
 
   background-color: var(--hero-footer-bgc);
@@ -485,21 +488,23 @@ ul {
 }
 
 .footer-soc-link {
+  width: 100%;
+  height: 100%;
+
   display: flex;
   justify-content: center;
   align-items: center;
 
-  width: 100%;
-  height: 100%;
   border-radius: 50px;
 
   background-color: #ffffff1a;
+  color: var(--footer-logo-color);
+  fill: currentColor;
 }
 .footer-soc-link:is(:hover, :focus) {
   background-color: var(--footer-soc-accent);
 }
 .footer-soc-icon {
-  fill: var(--footer-logo-color);
 }
 
 /* ----------------------------second page PORTFOLIO---------------------------------------- */
@@ -519,6 +524,10 @@ ul {
   justify-content: center;
   align-items: center;
   gap: 24px;
+
+  border: 1px solid transparent;
+}
+.filter-list-item {
 }
 
 .filter-container {
@@ -550,10 +559,10 @@ ul {
 } */
 
 .filter-btn:is(:hover, :focus) {
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
   background-color: var(--hover-focus-color);
   color: var(--hero-title-btn-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .portfolio-caption {
@@ -566,12 +575,20 @@ ul {
   column-gap: 24px;
   row-gap: 48px;
 }
-.portfolio-item {
-}
 
 .portfolio-item {
   width: calc((100% - 48px) / 3);
 }
+
+.portfolio-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.portfolio-link:is(:hover, :focus) {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
+}
+
 .portfolio-content {
   padding-top: 32px;
   padding-bottom: 32px;
@@ -584,10 +601,4 @@ ul {
 .portfolio-title {
 }
 .portfolio-text {
-}
-.portfolio-link {
-  display: block;
-}
-.portfolio-link:is(:hover, :focus) {
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
